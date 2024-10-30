@@ -4,44 +4,95 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Form HTML</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #34495e;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      color: #555;
+      text-align: center;
+    }
+    form {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    input[type="text"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+    .submit-btn {
+      background-color: #5cb85c;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 10px;
+      text-align: center;
+      text-decoration: none; /* Hilangkan garis bawah */
+      display: inline-block; /* Supaya bisa diposisikan seperti tombol */
+    }
+    .submit-btn:hover {
+      background-color: #4cae4c;
+    }
+  </style>
 </head>
 <body>
   <h1>Buat Account Baru</h1>
   <h2>Sign Up Form</h2>
 
-  <form action="welcome.html" method="post">
+  <form>
       <label for="first_name">First name:</label>
-      <input type="text" id="first_name" name="first_name"><br><br>
+      <input type="text" id="first_name" name="first_name"><br>
 
       <label for="last_name">Last name:</label>
-      <input type="text" id="last_name" name="last_name"><br><br>
+      <input type="text" id="last_name" name="last_name"><br>
 
-      <label>Gender:</label><br>
+      <label>Gender:</label>
       <input type="radio" id="male" name="gender" value="Male">
-      <label for="male">Male</label><br>
+      <label for="male">Male</label>
       <input type="radio" id="female" name="gender" value="Female">
-      <label for="female">Female</label><br><br>
+      <label for="female">Female</label><br>
 
       <label for="nationality">Nationality:</label>
       <select id="nationality" name="nationality">
           <option value="Indonesia">Indonesia</option>
           <option value="Other">Other</option>
-      </select><br><br>
+      </select><br>
 
-      <label>Language Spoken:</label><br>
+      <label>Language Spoken:</label>
       <input type="checkbox" id="bahasa" name="language" value="Bahasa Indonesia">
-      <label for="bahasa">Bahasa Indonesia</label><br>
+      <label for="bahasa">Bahasa Indonesia</label>
       <input type="checkbox" id="english" name="language" value="English">
       <label for="english">English</label><br>
-      <input type="checkbox" id="other" name="language" value="Other">
-      <label for="other">Other</label><br><br>
-
-      <label for="bio">Bio:</label><br>
-      <textarea id="bio" name="bio" rows="5" cols="30"></textarea><br><br>
-
-      <input type="submit" value="Sign Up">
+      
+      <!-- Tombol yang mengarah ke welcome.html -->
+      <a href="welcome.html" class="submit-btn">Daftar</a>
   </form>
-</body>
-</html>
 </body>
 </html>
