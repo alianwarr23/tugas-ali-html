@@ -1,47 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form HTML</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body>
-  <h1>Buat Account Baru</h1>
-  <h2>Sign Up Form</h2>
+<body class="bg-primary" style="background: linear-gradient(to right, #00c6ff, #0072ff); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
 
-  <form action="welcome.html" method="post">
-      <label for="first_name">First name:</label>
-      <input type="text" id="first_name" name="first_name"><br><br>
+    <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+        <div class="card p-4 shadow-lg rounded-2" style="max-width: 500px; width: 100%; bg-dark">
+            <h1 class="text-center mb-4 text-primary text-uppercase"><strong>Buat Account Baru</strong></h1>
+            <h2 class="text-center mb-4 text-muted">Sign Up Form</h2>
 
-      <label for="last_name">Last name:</label>
-      <input type="text" id="last_name" name="last_name"><br><br>
+            <form action="welcome.html" method="post">
+                <div class="mb-3">
+                    <label for="first_name" class="form-label"><strong>First name:</strong></label>
+                    <input type="text" class="form-control" id="first_name" name="first_name" required>
+                </div>
 
-      <label>Gender:</label><br>
-      <input type="radio" id="male" name="gender" value="Male">
-      <label for="male">Male</label><br>
-      <input type="radio" id="female" name="gender" value="Female">
-      <label for="female">Female</label><br><br>
+                <div class="mb-3">
+                    <label for="last_name" class="form-label"><strong>Last name:</strong></label>
+                    <input type="text" class="form-control" id="last_name" name="last_name" required>
+                </div>
 
-      <label for="nationality">Nationality:</label>
-      <select id="nationality" name="nationality">
-          <option value="Indonesia">Indonesia</option>
-          <option value="Other">Other</option>
-      </select><br><br>
+                <div class="mb-3">
+                    <label class="form-label"><strong>Gender:</strong></label>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" id="male" name="gender" value="Male" class="form-check-input" required>
+                        <label class="form-check-label" for="male">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" id="female" name="gender" value="Female" class="form-check-input" required>
+                        <label class="form-check-label" for="female">Female</label>
+                    </div>
+                </div>
 
-      <label>Language Spoken:</label><br>
-      <input type="checkbox" id="bahasa" name="language" value="Bahasa Indonesia">
-      <label for="bahasa">Bahasa Indonesia</label><br>
-      <input type="checkbox" id="english" name="language" value="English">
-      <label for="english">English</label><br>
-      <input type="checkbox" id="other" name="language" value="Other">
-      <label for="other">Other</label><br><br>
+                <div class="mb-3">
+                    <label for="nationality" class="form-label"><strong>Nationality:</strong></label>
+                    <select id="nationality" name="nationality" class="form-select" required>
+                        <option value="Indonesia">Indonesia</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
 
-      <label for="bio">Bio:</label><br>
-      <textarea id="bio" name="bio" rows="5" cols="30"></textarea><br><br>
+                <div class="mb-3">
+                    <label class="form-label"><strong>Language Spoken:</strong></label>
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" id="bahasa" name="language" value="Bahasa Indonesia" class="form-check-input">
+                        <label class="form-check-label" for="bahasa">Bahasa Indonesia</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" id="english" name="language" value="English" class="form-check-input">
+                        <label class="form-check-label" for="english">English</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" id="other" name="language" value="Other" class="form-check-input">
+                        <label class="form-check-label" for="other">Other</label>
+                    </div>
+                </div>
 
-      <input type="submit" value="Sign Up">
-  </form>
-</body>
-</html>
+                <div class="mb-3">
+                    <label for="bio" class="form-label"><strong>Bio:</strong></label>
+                    <textarea id="bio" name="bio" class="form-control" rows="5"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
